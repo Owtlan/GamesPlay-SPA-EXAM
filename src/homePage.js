@@ -40,7 +40,6 @@ const getCatalog = async () => {
             throw new Error('Failed to fetch data');
         }
         const data = await response.json();
-        console.log(data);
         return Object.values(data);
     } catch (error) {
         console.error('Error fetching catalog:', error);
