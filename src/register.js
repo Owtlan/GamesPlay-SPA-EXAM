@@ -1,7 +1,8 @@
 import page from '../node_modules/page/page.mjs';
 import { html, render } from '../node_modules/lit-html/lit-html.js';
 import { updateInfo } from '../app.js'
-// import { showHomePage } from '../app.js';
+import { homeView } from '../src/homePage.js';
+
 
 
 let registerTemplate = () => html`
@@ -39,7 +40,7 @@ function onSubmitForm(e) {
   
     let email = formData.get('email')
     let password = formData.get('password')
-    let repeatPassword = formData.get('re-password')
+    let repeatPassword = formData.get('confirm-password')
 
     if (password === '' || repeatPassword === '' || email === '') {
         window.alert('fields are empty')
@@ -68,7 +69,7 @@ function onSubmitForm(e) {
         localStorage.setItem('token', data.accessToken)
         localStorage.setItem('ownerId', data._id)
         updateInfo()
-        // showHomePage()
+        homeView()
       })
       .catch(error =>  window.alert(error.message))
 }
