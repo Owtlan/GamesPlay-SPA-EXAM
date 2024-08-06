@@ -5,7 +5,7 @@ import { homeView } from './src/homePage.js';
 import { registerView } from './src/register.js';
 import { loginView } from './src/login.js';
 import { logout } from './src/logout.js';
-// import { catalogView } from './src/dashboard.js';
+import { catalogView } from './src/dashboard.js';
 // import { createView } from './src/create.js';
 // import { detailsView } from './src/details.js';
 // import { editView } from './src/edit.js';
@@ -15,7 +15,7 @@ import { logout } from './src/logout.js';
 // page('/search', createSearch)
 page('/register', registerView)
 page('/login', loginView)
-// page('/dashboard', catalogView)
+page('/dashboard', catalogView)
 // page('/create', createView)
 // page('/details/:detailsId', detailsView)
 // page('/edit/:albumId', editView)
